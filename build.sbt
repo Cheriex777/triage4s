@@ -9,7 +9,7 @@ ThisBuild / homepage := Some(url("https://github.com/pavanvamsi3/triage4s"))
 val llm4sVersion = sys.props.getOrElse("llm4s.version", "0.5.1")
 
 lazy val common = Seq(
-  scalacOptions ++= Seq("-deprecation", "-feature", "-unchecked"),
+  scalacOptions ++= Seq("-deprecation", "-feature", "-unchecked", "-Wunused:imports"),
   libraryDependencies ++= Seq(
     "com.lihaoyi" %% "upickle" % "4.4.3",
     "org.scalatest" %% "scalatest" % "3.2.20" % Test
